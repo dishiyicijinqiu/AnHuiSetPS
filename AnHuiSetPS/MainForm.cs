@@ -500,8 +500,10 @@ namespace AnHuiSetPS
                         postStrSbuilder.AppendFormat("{0}={1}&", HttpUtility.UrlEncode("__EVENTTARGET"), HttpUtility.UrlEncode(str__EVENTTARGET));
                         postStrSbuilder.AppendFormat("{0}={1}&", HttpUtility.UrlEncode("__EVENTARGUMENT"), HttpUtility.UrlEncode(str__EVENTARGUMENT));
                         postStrSbuilder.AppendFormat("{0}={1}&", HttpUtility.UrlEncode("txtProduceCompany_PS"), HttpUtility.UrlEncode(strtxtProduceCompany_PS));
-                        postStrSbuilder.AppendFormat("{0}={1}&", HttpUtility.UrlEncode("ctl00$ContentPlaceHolder1$AspNetPager1_input"), HttpUtility.UrlEncode(strAspNetPager1_input));
-                        postStrSbuilder.AppendFormat("{0}={1}", HttpUtility.UrlEncode("ctl00$ContentPlaceHolder1$AspNetPager1_pagesize"), HttpUtility.UrlEncode(strAspNetPager1_pagesize));
+                        //postStrSbuilder.AppendFormat("{0}={1}&", HttpUtility.UrlEncode("ctl00$ContentPlaceHolder1$AspNetPager1_input"), HttpUtility.UrlEncode(strAspNetPager1_input));
+                        //postStrSbuilder.AppendFormat("{0}={1}", HttpUtility.UrlEncode("ctl00$ContentPlaceHolder1$AspNetPager1_pagesize"), HttpUtility.UrlEncode(strAspNetPager1_pagesize));
+                        postStrSbuilder.AppendFormat("{0}={1}&", HttpUtility.UrlEncode("AspNetPager1_input"), HttpUtility.UrlEncode(strAspNetPager1_input));
+                        postStrSbuilder.AppendFormat("{0}={1}", HttpUtility.UrlEncode("AspNetPager1_pagesize"), HttpUtility.UrlEncode(strAspNetPager1_pagesize));
                         byte[] postBytes = Encoding.UTF8.GetBytes(postStrSbuilder.ToString());
                         request.ContentType = "application/x-www-form-urlencoded";
                         request.ContentLength = postBytes.Length;
